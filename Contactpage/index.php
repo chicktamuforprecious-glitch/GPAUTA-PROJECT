@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - GPAUTA Recycling and Cleaning Service</title>
+<style>
+  :root {
+    --green-mid: rgb(14, 123, 14);
+    --green-light:rgba(10, 124, 29, 0.72);
+    --cyan: rgb(21, 158, 69);
+    --text-light:rgb(11, 11, 11);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: var(--green-mid);
+    color: var(--text-light);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 28px 6vw;
+    background:
+      linear-gradient(to right, rgba(53, 51, 51, 0.75), rgba(34, 32, 32, 0.35)),
+      url("img.jpg") center/cover no-repeat;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 500;
+    margin-bottom: 12px;
+    color:white;
+  }
+
+  .hero p {
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    line-height: 1.5;
+    max-width: 700px;
+    color:white;
+  }
+
+  .hero a {
+    color: var(--text-light);
+    text-decoration: underline;
+    color:white;
+  }
+
+  /* MAIN CONTENT */
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 50px 6vw;
+  }
+
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .card {
+    background-color: whitesmoke ;
+    border-radius: 16px;
+    padding: 60px 65px;
+    
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    
+  }
+
+  .card p {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 0.98rem;
+  }
+
+  .card .icon {
+    flex-shrink: 0;
+    opacity: 0.85;
+  }
+
+  /* FORM */
+  .form-card {
+    background: whitesmoke;
+    border-radius: 16px;
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .form-card h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .field, .message-field {
+    width: 100%;
+    background: green;
+    border: none;
+    border-radius: 14px;
+    padding: 16px 20px;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-family: inherit;
+  }
+
+  .field::placeholder,
+  .message-field::placeholder {
+    color: rgba(200, 202, 208, 0.8);
+  }
+
+  .message-field {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  .send-btn {
+    margin-top: 8px;
+    padding: 16px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, var(--cyan), var(--green-light));
+    color: rgba(176, 187, 176, 0.938);
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+  }
+
+  .send-btn:hover { opacity: 0.9; }
+  .send-btn:active { transform: scale(0.98); }
+
+  .form-status {
+    font-size: 0.9rem;
+    min-height: 20px;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 20px 6vw 50px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .social-icons a {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.15);
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-col a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
+
+  .footer-col a:hover { text-decoration: underline; }
+
+  /* RESPONSIVE */
+  @media (max-width: 800px) {
+    .contact-section { grid-template-columns: 1fr; }
+    .footer { grid-template-columns: 1fr; }
+    .social-icons { order: -1; }
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>We're free to help! From product support to media inquiries feel free to mail us at
+      <a href="mailto:gpautacleaningandrecycling@gmail.com">gpautacleaningandrecycling@gmail.com</a>
+    </p>
+  </section>
+
+  <section class="contact-section">
+    <div class="info-column">
+      <div class="card">
+        <h2>CAMEROON</h2>
+        <i class="fa-solid fa-location-dot"></i> 
+        <span>Cameroon, Southwest-Region, Buea</span>
+        <i class="fa-solid fa-phone"></i> <br><br>
+        <span>(+237)680-867-248,674-442-246,678-396-600</span>
+        <i class="fa-solid fa-envelope"></i><br><br>
+        <a href="mailto:gpautacleaningandrecycling@gmail.com">gpautacleaningandrecycling@gmail.com</a>
+      </div>
+      <div class="card">
+        <h2>WORKING HOURS</h2>
+        <i class="fa-solid fa-clock"></i>
+        <span>Mon-Fri: 6:00AM-7:00PM</span>
+      </div>
+    </div>
+
+    <form class="form-card" id="contactForm" method ="POST"> 
+      <h2>Send us message</h2>
+      <input class="field" type="text" id="name" name="name" placeholder="Name" required>
+      <input class="field" type="email" id="email" name="email" placeholder="Email id" required>
+      <input class="field" type="text" id="subject" name="subject" placeholder="Subject" required>
+      <textarea class="message-field" id="message" name="message" placeholder="Message" required></textarea>
+      <button type="submit" class="send-btn">Send</button>
+      <div class="form-status" id="formStatus"></div>
+    </form>
+  </section>
+ 
+  <footer class="footer">
+    <div class="social-icons">
+      <i class="fa-brands fa-tiktok"></i>
+      <a href="https://tiktok.com/@gpauta" target="_blank">@gpauta</a>
+      <i class="fa-brands fa-facebook"></i>
+      <a href="https://facebook.com/@gpauta" target="_blank">@gpauta</a>
+      <i class="fa-brands fa-intagram"></i>
+      <a href="https://instagram.com/@gpauta" target="_blank">@gpauta</a>
+      
+    </div>
+    <div class="footer-col">
+      <ul>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="team.html">The team</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="contact.html">Contact </a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <ul>
+        <li><a href="serviceareas.html">Services</a></li>
+        <li><a href="residentialcleaning.html">Residential cleaning</a></li>
+        <li><a href="commercialcleaning.html">Commercial cleaning</a></li>
+        <li><a href="wastecollection.html">Waste collection</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <ul>
+        <li><a href="recyclingpickup.html">Recycling pickup</a></li>
+        <li><a href="recyclingguide.html">Recycling guide</a></li>
+        <li><a href="cleaningtips.html">Cleaning tips</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !subject || !message) {
+        status.textContent = 'Please fill in all fields.';
+        status.style.color = '#ffb3b3';
+        return;
+      }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        status.textContent = 'Please enter a valid email address.';
+        status.style.color = '#ffb3b3';
+        return;
+      }
+
+      // Placeholder for real submission logic (e.g. fetch to a PHP endpoint)
+      // Example: fetch('send_message.php', { method: 'POST', body: new FormData(form) })
+
+      status.textContent = 'Message sent! We will get back to you soon.';
+      status.style.color = '#b3ffcc';
+      form.reset();
+    });
+  </script>
+
+    <?php
+
+header('Content-Type: application/json');
+require_once "config.php";
+
+// Only allow POST requests
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(["success" => false, "message" => "Invalid request method."]);
+    exit();
+}
+
+// 1. Collect and sanitize input
+$name    = trim($_POST['name'] ?? '');
+$email   = trim($_POST['email'] ?? '');
+$subject = trim($_POST['subject'] ?? '');
+$message = trim($_POST['message'] ?? '');
+
+// 2. Server-side validation (never trust client-side JS alone)
+$errors = [];
+
+if ($name === '' || strlen($name) > 100) {
+    $errors[] = "Please enter a valid name.";
+}
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "Please enter a valid email address.";
+}
+if ($subject === '' || strlen($subject) > 200) {
+    $errors[] = "Please enter a subject.";
+}
+if ($message === '') {
+    $errors[] = "Message cannot be empty.";
+}
+
+if (!empty($errors)) {
+    http_response_code(400);
+    echo json_encode(["success" => false, "message" => implode(" ", $errors)]);
+    exit();
+}
+
+// 3. Insert into database using a prepared statement (prevents SQL injection)
+$stmt = $conn->prepare(
+    "INSERT INTO contact_messages (name, email, subject, message) VALUES (?, ?, ?, ?)"
+);
+$stmt->bind_param("ssss", $name, $email, $subject, $message);
+
+if ($stmt->execute()) {
+    echo "Row inserted:" . $stmt->affected_rows . "<br>";
+    echo "Inserted ID" . $conn->insert_id . "<br>";
+    echo json_encode([
+        "success" => true,
+        "message" => "Your message has been sent successfully!"
+    ]);
+} else {
+    http_response_code(500);
+    echo json_encode([
+        "success" => false,
+        "message" => "Something went wrong. Please try again later."
+    ]);
+}
+
+$stmt->close();
+$conn->close();
+?>
+</body>
+</html>
